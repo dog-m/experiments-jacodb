@@ -1,0 +1,100 @@
+
+> Task :Main.main()
+Instantiating JacoDB...
+1146 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.14.16
+                                      
+Waiting for background jobs to finish...
+public java.util.ArrayList_ListItr#<init>()
+annotations:
+jacodb-raw:
+[c] java.lang.Object.<init>()
+ASM:
+[c] java.lang.Object.<init>()
+
+public java.util.ArrayList_ListItr#<init>(java.lang.Void)
+annotations:
+jacodb-raw:
+[c] java.lang.Object.<init>()
+[c] org.usvm.api.Engine.assume()
+ASM:
+[c] java.lang.Object.<init>()
+[c] org.usvm.api.Engine.assume()
+
+public java.util.ArrayList_ListItr#<init>(runtime.LibSLRuntime$Token)
+annotations:
+- runtime.LibSLRuntime$AutomatonConstructor
+jacodb-raw:
+[c] java.util.ArrayList_ListItr.<init>()
+ASM:
+[c] generated.java.util.ArrayList_ListIterator.<init>()
+
+public java.util.ArrayList_ListItr#<init>(runtime.LibSLRuntime$Token, byte, java.util.ArrayList, int, int, int)
+annotations:
+- runtime.LibSLRuntime$AutomatonConstructor
+jacodb-raw:
+[c] java.lang.Object.<init>()
+[w] java.util.ArrayList_ListItr.__$lsl_state
+[w] java.util.ArrayList_ListItr.lastRet
+[w] java.util.ArrayList_ListItr.__$lsl_state
+[w] java.util.ArrayList_ListItr.parent
+[w] java.util.ArrayList_ListItr.cursor
+[w] java.util.ArrayList_ListItr.expectedModCount
+[w] java.util.ArrayList_ListItr.lastRet
+ASM:
+[c] java.lang.Object.<init>()
+[w] generated.java.util.ArrayList_ListIterator.__$lsl_state
+[w] generated.java.util.ArrayList_ListIterator.lastRet
+[w] generated.java.util.ArrayList_ListIterator.__$lsl_state
+[w] generated.java.util.ArrayList_ListIterator.parent
+[w] generated.java.util.ArrayList_ListIterator.cursor
+[w] generated.java.util.ArrayList_ListIterator.expectedModCount
+[w] generated.java.util.ArrayList_ListIterator.lastRet
+
+public java.util.ArrayList_ListItr#hasNext()
+annotations:
+jacodb-raw:
+[r] java.util.ArrayList_ListItr.__$lsl_state
+[c] org.usvm.api.Engine.assume()
+[r] java.util.ArrayList_ListItr.parent
+[c] org.usvm.api.Engine.assume()
+[r] java.util.ArrayList_ListItr.cursor
+[r] java.util.ArrayList_ListItr.parent
+[r] java.util.ArrayList.length
+ASM:
+[r] generated.java.util.ArrayList_ListIterator.__$lsl_state
+[c] org.usvm.api.Engine.assume()
+[r] generated.java.util.ArrayList_ListIterator.parent
+[c] org.usvm.api.Engine.assume()
+[r] generated.java.util.ArrayList_ListIterator.cursor
+[r] generated.java.util.ArrayList_ListIterator.parent
+[r] generated.java.util.ArrayList.length
+
+public java.util.ArrayList_ListItr#next()
+annotations:
+jacodb-raw:
+[r] java.util.ArrayList_ListItr.__$lsl_state
+[c] org.usvm.api.Engine.assume()
+[c] org.usvm.api.Engine.makeSymbolic()
+ASM:
+[r] generated.java.util.ArrayList_ListIterator.__$lsl_state
+[c] org.usvm.api.Engine.assume()
+[c] org.usvm.api.Engine.makeSymbolic()
+
