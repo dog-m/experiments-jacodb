@@ -1,7 +1,6 @@
-
 > Task :Main.main()
 Instantiating JacoDB...
-1146 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
+794 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
                                       
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -29,7 +28,7 @@ jacodb-raw:
 ASM:
 [c] java.lang.Object.<init>()
 
-public java.util.ArrayList_ListItr#<init>(java.lang.Void)
+private java.util.ArrayList_ListItr#<init>(java.lang.Void)
 annotations:
 jacodb-raw:
 [c] java.lang.Object.<init>()
@@ -93,8 +92,11 @@ jacodb-raw:
 [r] java.util.ArrayList_ListItr.__$lsl_state
 [c] org.usvm.api.Engine.assume()
 [c] org.usvm.api.Engine.makeSymbolic()
+[r] java.util.ArrayList_ListItr.cursor
+[w] java.util.ArrayList_ListItr.cursor
 ASM:
 [r] generated.java.util.ArrayList_ListIterator.__$lsl_state
 [c] org.usvm.api.Engine.assume()
 [c] org.usvm.api.Engine.makeSymbolic()
-
+[r] generated.java.util.ArrayList_ListIterator.cursor
+[w] generated.java.util.ArrayList_ListIterator.cursor
