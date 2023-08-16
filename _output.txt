@@ -1,6 +1,6 @@
 > Task :Main.main()
 Instantiating JacoDB...
-794 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
+790 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
                                       
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -21,15 +21,21 @@ Instantiating JacoDB...
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.14.16
                                       
 Waiting for background jobs to finish...
+Target: java.util.ArrayList_ListItr
+interfaces: 2
+- java.util.Iterator
+- runtime.LibSLRuntime$HasAutomaton
+methods: 6
+
 public java.util.ArrayList_ListItr#<init>()
-annotations:
+annotations: 0
 jacodb-raw:
 [c] java.lang.Object.<init>()
 ASM:
 [c] java.lang.Object.<init>()
 
 private java.util.ArrayList_ListItr#<init>(java.lang.Void)
-annotations:
+annotations: 0
 jacodb-raw:
 [c] java.lang.Object.<init>()
 [c] org.usvm.api.Engine.assume()
@@ -38,7 +44,7 @@ ASM:
 [c] org.usvm.api.Engine.assume()
 
 public java.util.ArrayList_ListItr#<init>(runtime.LibSLRuntime$Token)
-annotations:
+annotations: 1
 - runtime.LibSLRuntime$AutomatonConstructor
 jacodb-raw:
 [c] java.util.ArrayList_ListItr.<init>()
@@ -46,7 +52,7 @@ ASM:
 [c] generated.java.util.ArrayList_ListIterator.<init>()
 
 public java.util.ArrayList_ListItr#<init>(runtime.LibSLRuntime$Token, byte, java.util.ArrayList, int, int, int)
-annotations:
+annotations: 1
 - runtime.LibSLRuntime$AutomatonConstructor
 jacodb-raw:
 [c] java.lang.Object.<init>()
@@ -68,7 +74,7 @@ ASM:
 [w] generated.java.util.ArrayList_ListIterator.lastRet
 
 public java.util.ArrayList_ListItr#hasNext()
-annotations:
+annotations: 0
 jacodb-raw:
 [r] java.util.ArrayList_ListItr.__$lsl_state
 [c] org.usvm.api.Engine.assume()
@@ -87,7 +93,7 @@ ASM:
 [r] generated.java.util.ArrayList.length
 
 public java.util.ArrayList_ListItr#next()
-annotations:
+annotations: 0
 jacodb-raw:
 [r] java.util.ArrayList_ListItr.__$lsl_state
 [c] org.usvm.api.Engine.assume()

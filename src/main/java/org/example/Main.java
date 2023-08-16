@@ -1,5 +1,6 @@
 package org.example;
 
+import org.jacodb.api.JcAnnotation;
 import org.jacodb.api.JcClassOrInterface;
 import org.jacodb.api.JcMethod;
 import org.jacodb.api.JcSymbol;
@@ -100,7 +101,7 @@ public final class Main {
         });
     }
 
-    private void inspectJacodbInstr(JcMethod method) {
+    private void inspectJacodbInstr(final JcMethod method) {
         System.out.println("jacodb-raw:");
 
         for (var i : method.getRawInstList()) {
@@ -129,15 +130,20 @@ public final class Main {
         }
     }
 
+    private static void inspectAnnotations(final List<JcAnnotation> annotations) {
+        System.out.println("annotations: " + annotations.size());
+        annotations.stream()
+                .sorted(Comparator.comparing(JcSymbol::getName))
+                .map(JcSymbol::getName)
+                .map(n -> "- " + n)
+                .forEach(System.out::println);
+    }
+
     private void inspectMethod(final JcMethod method) {
         final var signature = formatMethodSignature(method);
         System.out.println(signature);
 
-        System.out.println("annotations:");
-        method.getAnnotations().stream()
-                .map(JcSymbol::getName)
-                .map(n -> "- " + n)
-                .forEach(System.out::println);
+        inspectAnnotations(method.getAnnotations());
 
         /*
         System.out.println("<raw>:");
@@ -151,17 +157,32 @@ public final class Main {
         System.out.println();
     }
 
-    private void inspectMethods(List<JcMethod> methods) {
+    private void inspectMethods(final List<JcMethod> methods) {
+        System.out.println("methods: " + methods.size());
+
+        System.out.println();
         methods.stream()
                 .sorted(Comparator.comparing(JcSymbol::getName))
                 .forEach(this::inspectMethod);
     }
 
-    private void inspectClass(JcClassOrInterface clazz) {
+    private void inspectInterfaces(final List<JcClassOrInterface> interfaces) {
+        System.out.println("interfaces: " + interfaces.size());
+        interfaces.stream()
+                .sorted(Comparator.comparing(JcSymbol::getName))
+                .map(JcSymbol::getName)
+                .map(n -> "- " + n)
+                .forEach(System.out::println);
+    }
+
+    private void inspectClass(final JcClassOrInterface clazz) {
+        System.out.println("Target: " + clazz.getName());
+
+        inspectInterfaces(clazz.getInterfaces());
         inspectMethods(clazz.getDeclaredMethods());
     }
 
-    private void run(String className) throws Exception {
+    private void run(final String className) throws Exception {
         final var stdlib = new File("std-library.jar");
         if (!stdlib.exists())
             throw new RuntimeException();
