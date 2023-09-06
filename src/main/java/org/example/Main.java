@@ -53,7 +53,15 @@ public final class Main {
 
         final var modifiers = getModifiers(m.getAccess());
 
-        return modifiers + " " + m.getEnclosingClass().getName() + "#" + m.getName() + "(" + parameters + ")";
+        return modifiers +
+                " " +
+                m.getEnclosingClass().getName() +
+                "#" +
+                m.getName() +
+                "(" +
+                parameters +
+                ") -> " +
+                m.getReturnType().getTypeName();
     }
 
     private String formatCallExpr(final JcRawCallExpr expr) {
