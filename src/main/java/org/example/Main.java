@@ -1,9 +1,6 @@
 package org.example;
 
-import org.jacodb.api.JcAnnotation;
-import org.jacodb.api.JcClassOrInterface;
-import org.jacodb.api.JcMethod;
-import org.jacodb.api.JcSymbol;
+import org.jacodb.api.*;
 import org.jacodb.api.cfg.JcRawAssignInst;
 import org.jacodb.api.cfg.JcRawCallExpr;
 import org.jacodb.api.cfg.JcRawCallInst;
@@ -174,6 +171,15 @@ public final class Main {
                 .forEach(this::inspectMethod);
     }
 
+    private void inspectFields(final List<JcField> fields) {
+        System.out.println("fields: " + fields.size());
+        fields.stream()
+                .sorted(Comparator.comparing(JcSymbol::getName))
+                .map(f -> f.getName() + " : " + f.getType().getTypeName())
+                .map(n -> "- " + n)
+                .forEach(System.out::println);
+    }
+
     private void inspectInterfaces(final List<JcClassOrInterface> interfaces) {
         System.out.println("interfaces: " + interfaces.size());
         interfaces.stream()
@@ -187,6 +193,7 @@ public final class Main {
         System.out.println("Target: " + clazz.getName());
 
         inspectInterfaces(clazz.getInterfaces());
+        inspectFields(clazz.getDeclaredFields());
         inspectMethods(clazz.getDeclaredMethods());
     }
 
@@ -213,7 +220,8 @@ public final class Main {
                         List.of(Approximations.INSTANCE))
                 .get()
                 .findClassOrNull(className);
-        assert clazz != null;
+        if (clazz == null)
+            throw new RuntimeException("Unable to find class " + className);
 
         inspectClass(clazz);
     }
