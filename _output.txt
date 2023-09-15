@@ -1,6 +1,6 @@
 > Task :Main.main()
 Instantiating JacoDB...
-790 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
+802 [DefaultDispatcher-worker-1] INFO org.jooq.Constants - 
                                       
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -21,20 +21,76 @@ Instantiating JacoDB...
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.14.16
                                       
 Waiting for background jobs to finish...
-Target: java.util.ArrayList_ListItr
-interfaces: 2
-- java.util.Iterator
-- runtime.LibSLRuntime$HasAutomaton
-methods: 6
+Target: runtime.LibSLGlobals
+interfaces: 0
+fields: 12
+- EMPTY_OPTIONAL : java.util.Optional
+- EMPTY_OPTIONAL_DOUBLE : java.util.OptionalDouble
+- EMPTY_OPTIONAL_INT : java.util.OptionalInt
+- EMPTY_OPTIONAL_LONG : java.util.OptionalLong
+- SPLITERATOR_CONCURRENT : int
+- SPLITERATOR_DISTINCT : int
+- SPLITERATOR_IMMUTABLE : int
+- SPLITERATOR_NONNULL : int
+- SPLITERATOR_ORDERED : int
+- SPLITERATOR_SIZED : int
+- SPLITERATOR_SORTED : int
+- SPLITERATOR_SUBSIZED : int
+methods: 3
 
-public java.util.ArrayList_ListItr#<init>()
+static runtime.LibSLGlobals#<clinit>() -> void
+annotations: 0
+jacodb-raw:
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] java.util.Optional.<init>()
+[w] runtime.LibSLGlobals.EMPTY_OPTIONAL
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] java.util.OptionalDouble.<init>()
+[w] runtime.LibSLGlobals.EMPTY_OPTIONAL_DOUBLE
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] java.util.OptionalInt.<init>()
+[w] runtime.LibSLGlobals.EMPTY_OPTIONAL_INT
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] java.util.OptionalLong.<init>()
+[w] runtime.LibSLGlobals.EMPTY_OPTIONAL_LONG
+[w] runtime.LibSLGlobals.SPLITERATOR_CONCURRENT
+[w] runtime.LibSLGlobals.SPLITERATOR_DISTINCT
+[w] runtime.LibSLGlobals.SPLITERATOR_IMMUTABLE
+[w] runtime.LibSLGlobals.SPLITERATOR_NONNULL
+[w] runtime.LibSLGlobals.SPLITERATOR_ORDERED
+[w] runtime.LibSLGlobals.SPLITERATOR_SIZED
+[w] runtime.LibSLGlobals.SPLITERATOR_SORTED
+[w] runtime.LibSLGlobals.SPLITERATOR_SUBSIZED
+ASM:
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] generated.java.util.Optional.<init>()
+[w] generated.runtime.LibSLGlobals.EMPTY_OPTIONAL
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] generated.java.util.OptionalDouble.<init>()
+[w] generated.runtime.LibSLGlobals.EMPTY_OPTIONAL_DOUBLE
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] generated.java.util.OptionalInt.<init>()
+[w] generated.runtime.LibSLGlobals.EMPTY_OPTIONAL_INT
+[r] runtime.LibSLRuntime$Token.INSTANCE
+[c] generated.java.util.OptionalLong.<init>()
+[w] generated.runtime.LibSLGlobals.EMPTY_OPTIONAL_LONG
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_CONCURRENT
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_DISTINCT
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_IMMUTABLE
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_NONNULL
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_ORDERED
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_SIZED
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_SORTED
+[w] generated.runtime.LibSLGlobals.SPLITERATOR_SUBSIZED
+
+public runtime.LibSLGlobals#<init>() -> void
 annotations: 0
 jacodb-raw:
 [c] java.lang.Object.<init>()
 ASM:
 [c] java.lang.Object.<init>()
 
-private java.util.ArrayList_ListItr#<init>(java.lang.Void)
+private runtime.LibSLGlobals#<init>(java.lang.Void) -> void
 annotations: 0
 jacodb-raw:
 [c] java.lang.Object.<init>()
@@ -42,67 +98,3 @@ jacodb-raw:
 ASM:
 [c] java.lang.Object.<init>()
 [c] org.usvm.api.Engine.assume()
-
-public java.util.ArrayList_ListItr#<init>(runtime.LibSLRuntime$Token)
-annotations: 1
-- runtime.LibSLRuntime$AutomatonConstructor
-jacodb-raw:
-[c] java.util.ArrayList_ListItr.<init>()
-ASM:
-[c] generated.java.util.ArrayList_ListIterator.<init>()
-
-public java.util.ArrayList_ListItr#<init>(runtime.LibSLRuntime$Token, byte, java.util.ArrayList, int, int, int)
-annotations: 1
-- runtime.LibSLRuntime$AutomatonConstructor
-jacodb-raw:
-[c] java.lang.Object.<init>()
-[w] java.util.ArrayList_ListItr.__$lsl_state
-[w] java.util.ArrayList_ListItr.lastRet
-[w] java.util.ArrayList_ListItr.__$lsl_state
-[w] java.util.ArrayList_ListItr.parent
-[w] java.util.ArrayList_ListItr.cursor
-[w] java.util.ArrayList_ListItr.expectedModCount
-[w] java.util.ArrayList_ListItr.lastRet
-ASM:
-[c] java.lang.Object.<init>()
-[w] generated.java.util.ArrayList_ListIterator.__$lsl_state
-[w] generated.java.util.ArrayList_ListIterator.lastRet
-[w] generated.java.util.ArrayList_ListIterator.__$lsl_state
-[w] generated.java.util.ArrayList_ListIterator.parent
-[w] generated.java.util.ArrayList_ListIterator.cursor
-[w] generated.java.util.ArrayList_ListIterator.expectedModCount
-[w] generated.java.util.ArrayList_ListIterator.lastRet
-
-public java.util.ArrayList_ListItr#hasNext()
-annotations: 0
-jacodb-raw:
-[r] java.util.ArrayList_ListItr.__$lsl_state
-[c] org.usvm.api.Engine.assume()
-[r] java.util.ArrayList_ListItr.parent
-[c] org.usvm.api.Engine.assume()
-[r] java.util.ArrayList_ListItr.cursor
-[r] java.util.ArrayList_ListItr.parent
-[r] java.util.ArrayList.length
-ASM:
-[r] generated.java.util.ArrayList_ListIterator.__$lsl_state
-[c] org.usvm.api.Engine.assume()
-[r] generated.java.util.ArrayList_ListIterator.parent
-[c] org.usvm.api.Engine.assume()
-[r] generated.java.util.ArrayList_ListIterator.cursor
-[r] generated.java.util.ArrayList_ListIterator.parent
-[r] generated.java.util.ArrayList.length
-
-public java.util.ArrayList_ListItr#next()
-annotations: 0
-jacodb-raw:
-[r] java.util.ArrayList_ListItr.__$lsl_state
-[c] org.usvm.api.Engine.assume()
-[c] org.usvm.api.Engine.makeSymbolic()
-[r] java.util.ArrayList_ListItr.cursor
-[w] java.util.ArrayList_ListItr.cursor
-ASM:
-[r] generated.java.util.ArrayList_ListIterator.__$lsl_state
-[c] org.usvm.api.Engine.assume()
-[c] org.usvm.api.Engine.makeSymbolic()
-[r] generated.java.util.ArrayList_ListIterator.cursor
-[w] generated.java.util.ArrayList_ListIterator.cursor
