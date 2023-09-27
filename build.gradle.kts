@@ -1,5 +1,6 @@
 plugins {
-    id("java")
+    java
+    application
 }
 
 group = "org.example"
@@ -17,6 +18,10 @@ dependencies {
     implementation("org.jacodb:jacodb-core:1.2.0")
     implementation("org.jacodb:jacodb-analysis:1.2.0")
     implementation("org.jacodb:jacodb-approximations:1.2.0")
+}
+
+application {
+    mainClass.set("org.example.Main")
 }
 
 tasks.test {
