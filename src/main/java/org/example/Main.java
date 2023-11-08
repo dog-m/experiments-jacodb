@@ -189,9 +189,16 @@ public final class Main {
                 .forEach(System.out::println);
     }
 
+    private void inspectSuperclass(final JcClassOrInterface clazz) {
+        final var superClass = clazz.getSuperClass();
+        System.out.println("super:");
+        System.out.println("- " + (superClass != null ? superClass.getName() : "java.lang.Object"));
+    }
+
     private void inspectClass(final JcClassOrInterface clazz) {
         System.out.println("Target: " + clazz.getName());
 
+        inspectSuperclass(clazz);
         inspectInterfaces(clazz.getInterfaces());
         inspectFields(clazz.getDeclaredFields());
         inspectMethods(clazz.getDeclaredMethods());
